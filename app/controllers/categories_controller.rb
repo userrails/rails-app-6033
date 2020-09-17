@@ -28,6 +28,7 @@ class CategoriesController < ApplicationController
 
     respond_to do |format|
       if @category.save
+        SampleJob.perform_async
         format.html { redirect_to @category, notice: 'Category was successfully created.' }
         format.json { render :show, status: :created, location: @category }
       else
