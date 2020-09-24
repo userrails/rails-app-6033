@@ -15,3 +15,8 @@ It is the autoloader for Rails 6, which eliminates use cases for require_depende
 * Multi DB support which has master-slave DB strategy.
 
 * Action MailBox
+```
+rails action_mailbox:install
+rails db:migrate
+rails webpacker:install
+```
